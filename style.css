@@ -74,7 +74,7 @@ margin-left: 16px;
     border: none;
     border-radius: 50%;
     background-color: #ffffff;
-    background-image: url(/img/slader_button.svg);
+    background-image: url(img/slader_button.svg);
     cursor: pointer;
 }
 .element__button:hover{
