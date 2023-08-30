@@ -92,6 +92,34 @@ margin-left: 16px;
         background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 
     } 
+    .button-read-more{
+        border: none;
+        background-color: transparent;
+    }
+    .button-read-more:hover{
+        transform: scale(1.1);
+    }
+    .button-read-more__image{
+        margin-left: 5px;
+    }
+    .button-read-more__text{
+        margin-left: 8px;
+        font-family: "TT Lakes";
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+
+    }
+    .read-more{
+        margin-top: 24px;
+    }
+    .hidden{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+
 /* Swiper*/
 
 .swiper .swiper-pagination-bullet-active{
@@ -103,23 +131,77 @@ margin-left: 16px;
     width: 12px;
     height: 12px;
 }
+/*---------------------- */
+@media (width < 767px){
+     .hidden-more,.read-more {
+        display: none;
+    }
 
-@media ( 768px < width <= 1120px){
-    
+}
+@media ( 768px < width < 1121px){
+    .container-slider .swiper{
+        width: 710px;
+    }
     .swiper .swiper-wrapper{
         gap: 24px 16px;
+        display: flex;
         flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
     }   
     .swiper .swiper-slide{
         width: 224px;
         height: 72px;
         position: static;
-        flex: 0 0 calc((100% / 3) - 48px);
-        /* width: calc((100% / 3) - 48px); */
+        flex: 0 0 224px;
     }
-    .swiper:after{display: none;}
-    .container-slider {
-        /* display: flex;
-        justify-content: center; */
+    .swiper:after,
+    .swiper-pagination{
+        display: none;
+    }
+    .swiper-wrapper .hidden{
+        display: none;
+    }
+    .swiper-slide:nth-last-child(-n+5){
+        display: none;
+    }
+    .swiper-wrapper .show{
+        display: block;
+    }
+
+}
+
+@media (  width >= 1121px){
+    .container-slider .swiper{
+        width: 950px;
+    }
+    .swiper .swiper-wrapper{
+        gap: 24px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+    }   
+    .swiper .swiper-slide{
+        width: 224px;
+        height: 72px;
+        position: static;
+        flex: 0 0 224px;
+    }
+    .swiper:after,
+    .swiper-pagination{
+        display: none;
+    }
+    .hidden{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    .swiper-slide:nth-last-child(-n+3){
+        display: none;
+    }
+    .swiper-wrapper .show{
+        display: block;
     }
 }
